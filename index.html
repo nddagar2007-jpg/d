@@ -195,6 +195,92 @@ body{}
 			html {
 				scroll-behavior: smooth;
 			}
+			/* Popup Notification Overlay */
+			#notification-popup {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				width: 350px;
+				max-width: 90%;
+				background: #fff;
+				border-radius: 12px;
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+				z-index: 99999;
+				display: none;
+				overflow: hidden;
+				animation: slideInUp 0.5s ease-out;
+			}
+			#notification-popup.show {
+				display: block;
+			}
+			#notification-popup .popup-content {
+				position: relative;
+				width: 100%;
+			}
+			#notification-popup .popup-image {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			#notification-popup .popup-close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 32px;
+				height: 32px;
+				background: rgba(0, 0, 0, 0.6);
+				border-radius: 50%;
+				border: none;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 10;
+				transition: background 0.3s ease;
+			}
+			#notification-popup .popup-close:hover {
+				background: rgba(0, 0, 0, 0.8);
+			}
+			#notification-popup .popup-close::before,
+			#notification-popup .popup-close::after {
+				content: '';
+				position: absolute;
+				width: 18px;
+				height: 2px;
+				background: #fff;
+				border-radius: 2px;
+			}
+			#notification-popup .popup-close::before {
+				transform: rotate(45deg);
+			}
+			#notification-popup .popup-close::after {
+				transform: rotate(-45deg);
+			}
+			@keyframes slideInUp {
+				from {
+					transform: translateY(100px);
+					opacity: 0;
+				}
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+			@media (max-width: 768px) {
+				#notification-popup {
+					width: 300px;
+					bottom: 15px;
+					right: 15px;
+				}
+			}
+			@media (max-width: 480px) {
+				#notification-popup {
+					width: calc(100% - 30px);
+					bottom: 10px;
+					right: 15px;
+					left: 15px;
+				}
+			}
 		</style>
 		</head>
 
@@ -344,7 +430,7 @@ body{}
 											data-frame_1="sp:1000;"
 											data-frame_999="o:0;st:w;"
 											style="z-index:5;font-family:'Cormorant';display:inline-block;"
-										>Clarks Spa & Resort Pushkar: Nature’s Haven of Luxury 
+										>Clarks Naugaon, Alwar
 										</rs-layer><!--
 
 										--><rs-layer
@@ -364,201 +450,7 @@ body{}
 										--><a
 											id="slider-1-slide-5-layer-5" 
 											class="rs-layer button-effect rev-btn"
-											href="clarks-Pushkar/index.html" target="_self"
-											data-type="text"
-											data-color="#000000"
-											title="Explore now"
-											data-xy="xo:50px,34px,25px,15px;yo:244px,169px,128px,78px;"
-											data-pos="r"
-											data-text="w:normal;s:12;l:24;ls:2px;a:left,left,left,center;"
-											data-dim="minh:0px,none,none,none;"
-											data-rsp_o="off"
-											data-rsp_bd="off"
-											data-disp="inline-block"
-											data-padding="r:0,35,35,35;l:0,35,35,35;"
-											data-frame_1="e:power4.inOut;sp:1500;"
-											data-frame_999="o:0;st:w;"
-											data-frame_hover="c:#fff;bgc:#c78960;bor:0px,0px,0px,0px;"
-											style="z-index:7;background-color:rgba(255,255,255,1);font-family:'Plus Jakarta Sans';text-transform:uppercase;display:inline-block;"
-										><span>Explore now</span> 
-										</a><!--
-									--></rs-column><!--
-								--></rs-row><!--
-							--></rs-zone><!--
--->					</rs-slide>
-						<rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide" data-thumb="wp-content/uploads/2024/06/Azabgarh-50x100.png" data-anim="adpr:false;p:light;" data-in="o:0;" data-out="o:0;">
-							<img decoding="async" src="wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Azabgarh" width="1536" height="1007" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="wp-content/uploads/2024/06/Azabgarh.png" data-no-retina>
-<!--						--><rs-zone id="rrzm_1" class="rev_row_zone_middle" style="z-index: 13;"><!--
-
-								--><rs-row
-									id="slider-1-slide-1-layer-0" 
-									data-type="row"
-									data-xy="xo:50px;yo:349px;"
-									data-cbreak="1"
-									data-rsp_bd="off"
-									data-padding="t:30,30,30,60;r:30;b:30,30,30,0;l:30;"
-									data-frame_0="o:1;"
-									data-frame_999="o:0;st:w;sA:9000;"
-									style="z-index:1;"
-								><!--
-									--><rs-column
-										id="slider-1-slide-1-layer-1" 
-										data-type="column"
-										data-xy="xo:50px;yo:349px;"
-										data-text="a:left,left,left,center;"
-										data-rsp_bd="off"
-										data-column="w:100%;a:middle;"
-										data-frame_0="o:1;"
-										data-frame_999="o:0;st:w;sA:9000;"
-										style="z-index:2;width:100%;"
-									><!--
-										--><rs-layer
-											id="slider-1-slide-1-layer-2" 
-											data-type="shape"
-											data-rsp_ch="on"
-											data-xy="xo:50px,34px,25px,15px;yo:244px,169px,128px,78px;"
-											data-pos="r"
-											data-text="w:normal;s:20,13,9,5;c:both;l:0,17,12,7;"
-											data-flcr="c:both;"
-											data-dim="w:100%;h:10px,6px,4px,2px;"
-											data-frame_999="o:0;st:w;"
-											style="z-index:4;"
-										> 
-										</rs-layer><!--
-
-										--><rs-layer
-											id="slider-1-slide-1-layer-4" 
-											data-type="text"
-											data-xy="xo:50px,34px,25px,15px;yo:50px,34px,25px,15px;"
-											data-pos="r"
-											data-text="w:normal;s:80,80,60,40;l:80,80,60,45;ls:-4px,-4px,-4px,-2px;fw:600;a:left,left,left,center;"
-											data-dim="w:60%,550px,550px,100%;"
-											data-rsp_o="off"
-											data-rsp_bd="off"
-											data-disp="inline-block"
-											data-padding="b:30;"
-											data-frame_0="y:-50,-34,-25,-15;"
-											data-frame_1="sp:1000;"
-											data-frame_999="o:0;st:w;"
-											style="z-index:5;font-family:'Cormorant';display:inline-block;"
-										>Clarks Sakleshpura: Where Luxury Meets Serenity 
-										</rs-layer><!--
-
-										--><rs-layer
-											id="slider-1-slide-1-layer-6" 
-											data-type="shape"
-											data-rsp_ch="on"
-											data-xy="xo:50px,34px,25px,15px;yo:244px,169px,128px,78px;"
-											data-pos="r"
-											data-text="w:normal;s:20,13,9,5;c:both;l:0,17,12,7;"
-											data-flcr="c:both;"
-											data-dim="w:100%;h:10px,6px,4px,2px;"
-											data-frame_999="o:0;st:w;"
-											style="z-index:6;"
-										> 
-										</rs-layer><!--
-
-										--><a
-											id="slider-1-slide-1-layer-5" 
-											class="rs-layer button-effect rev-btn"
-											href="clarks-azabgarh/index.html" target="_self"
-											data-type="text"
-											data-color="#000000"
-											title="Explore now"
-											data-xy="xo:50px,34px,25px,15px;yo:244px,169px,128px,78px;"
-											data-pos="r"
-											data-text="w:normal;s:12;l:24;ls:2px;a:left,left,left,center;"
-											data-dim="minh:0px,none,none,none;"
-											data-rsp_o="off"
-											data-rsp_bd="off"
-											data-disp="inline-block"
-											data-padding="r:0,35,35,35;l:0,35,35,35;"
-											data-frame_1="e:power4.inOut;sp:1500;"
-											data-frame_999="o:0;st:w;"
-											data-frame_hover="c:#fff;bgc:#c78960;bor:0px,0px,0px,0px;"
-											style="z-index:7;background-color:rgba(255,255,255,1);font-family:'Plus Jakarta Sans';text-transform:uppercase;display:inline-block;"
-										><span>Explore now</span> 
-										</a><!--
-									--></rs-column><!--
-								--></rs-row><!--
-							--></rs-zone><!--
--->					</rs-slide>
-						<rs-slide style="position: absolute;" data-key="rs-3" data-title="Slide" data-thumb="wp-content/uploads/2024/06/Jaiselmer-50x100.png" data-anim="adpr:false;p:light;" data-in="o:0;" data-out="o:0;">
-							<img decoding="async" src="wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Jaiselmer" width="1536" height="1007" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="wp-content/uploads/2024/06/Jaiselmer.png" data-no-retina>
-<!--						--><rs-zone id="rrzm_3" class="rev_row_zone_middle" style="z-index: 13;"><!--
-
-								--><rs-row
-									id="slider-1-slide-3-layer-0" 
-									data-type="row"
-									data-xy="xo:50px;yo:349px;"
-									data-cbreak="1"
-									data-rsp_bd="off"
-									data-padding="t:30,30,30,60;r:30;b:30,30,30,0;l:30;"
-									data-frame_0="o:1;"
-									data-frame_999="o:0;st:w;sA:9000;"
-									style="z-index:1;"
-								><!--
-									--><rs-column
-										id="slider-1-slide-3-layer-1" 
-										data-type="column"
-										data-xy="xo:50px;yo:349px;"
-										data-text="a:left,left,left,center;"
-										data-rsp_bd="off"
-										data-column="w:100%;a:middle;"
-										data-frame_0="o:1;"
-										data-frame_999="o:0;st:w;sA:9000;"
-										style="z-index:2;width:100%;"
-									><!--
-										--><rs-layer
-											id="slider-1-slide-3-layer-2" 
-											data-type="shape"
-											data-rsp_ch="on"
-											data-xy="xo:50px,34px,25px,15px;yo:244px,169px,128px,78px;"
-											data-pos="r"
-											data-text="w:normal;s:20,13,9,5;c:both;l:0,17,12,7;"
-											data-flcr="c:both;"
-											data-dim="w:100%;h:10px,6px,4px,2px;"
-											data-frame_999="o:0;st:w;"
-											style="z-index:4;"
-										> 
-										</rs-layer><!--
-
-										--><rs-layer
-											id="slider-1-slide-3-layer-4" 
-											data-type="text"
-											data-xy="xo:50px,34px,25px,15px;yo:50px,34px,25px,15px;"
-											data-pos="r"
-											data-text="w:normal;s:80,80,60,40;l:80,80,60,45;ls:-4px,-4px,-4px,-2px;fw:600;a:left,left,left,center;"
-											data-dim="w:60%,550px,550px,100%;"
-											data-rsp_o="off"
-											data-rsp_bd="off"
-											data-disp="inline-block"
-											data-padding="b:30;"
-											data-frame_0="y:-50,-34,-25,-15;"
-											data-frame_1="sp:1000;"
-											data-frame_999="o:0;st:w;"
-											style="z-index:5;font-family:'Cormorant';display:inline-block;"
-										>the clarks naugaon: Royal Elegance in the Heart of the Desert 
-										</rs-layer><!--
-
-										--><rs-layer
-											id="slider-1-slide-3-layer-6" 
-											data-type="shape"
-											data-rsp_ch="on"
-											data-xy="xo:50px,34px,25px,15px;yo:244px,169px,128px,78px;"
-											data-pos="r"
-											data-text="w:normal;s:20,13,9,5;c:both;l:0,17,12,7;"
-											data-flcr="c:both;"
-											data-dim="w:100%;h:10px,6px,4px,2px;"
-											data-frame_999="o:0;st:w;"
-											style="z-index:6;"
-										> 
-										</rs-layer><!--
-
-										--><a
-											id="slider-1-slide-3-layer-5" 
-											class="rs-layer button-effect rev-btn"
-											href="the-clarks-Pushkar/index.html" target="_self"
+											href="index.html" target="_self"
 											data-type="text"
 											data-color="#000000"
 											title="Explore now"
@@ -616,19 +508,19 @@ body{}
 							<li class="elementor-icon-list-item elementor-inline-item">
 											<a href="https://www.facebook.com/profile.php?id=100069734555440">
 
-											<span class="elementor-icon-list-text">.Facebook</span>
+											<span class="elementor-icon-list-text"></span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item elementor-inline-item">
 											<a href="https://www.instagram.com/investwithclarks/">
 
-											<span class="elementor-icon-list-text">.Instagram</span>
+											<span class="elementor-icon-list-text"></span>
 											</a>
 									</li>
 								<li class="elementor-icon-list-item elementor-inline-item">
 											<a href="https://www.linkedin.com/company/invest-with-clarks/">
 
-											<span class="elementor-icon-list-text"> .LinkedIn</span>
+											<span class="elementor-icon-list-text"> </span>
 											</a>
 									</li>
 						</ul>
@@ -645,7 +537,7 @@ body{}
 						<div class="elementor-element elementor-element-7b9765c button-icon-align-right elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="7b9765c" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 			        <div class="elementor-button-wrapper">
-            <a href="contact/index.html" class="elementor-button-link 1102 elementor-button" role="button">
+            <a href="index.html" class="elementor-button-link 1102 elementor-button" role="button">
                 		<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-icon elementor-align-icon-right">
 				<svg aria-hidden="true" class="e-font-icon-svg e-fas-arrow-circle-right" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></svg>			</span>
@@ -1521,6 +1413,54 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
       setTimeout(initCounters, 500);
     });
   }
+})();
+</script>
+<!-- Notification Popup -->
+<div id="notification-popup">
+	<div class="popup-content">
+		<button class="popup-close" aria-label="Close notification"></button>
+		<img src="popup.jpeg" alt="Notification" class="popup-image">
+	</div>
+</div>
+<script>
+(function() {
+	// Show popup on page load
+	function showNotificationPopup() {
+		var popup = document.getElementById('notification-popup');
+		if (popup) {
+			// Check if popup was already closed (using sessionStorage)
+			if (!sessionStorage.getItem('notificationClosed')) {
+				setTimeout(function() {
+					popup.classList.add('show');
+				}, 1000); // Show after 1 second delay
+			}
+		}
+	}
+	
+	// Close popup function
+	function closeNotificationPopup() {
+		var popup = document.getElementById('notification-popup');
+		if (popup) {
+			popup.classList.remove('show');
+			// Remember that popup was closed in this session
+			sessionStorage.setItem('notificationClosed', 'true');
+		}
+	}
+	
+	// Initialize on page load
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', showNotificationPopup);
+	} else {
+		showNotificationPopup();
+	}
+	
+	// Add close button event listener
+	document.addEventListener('DOMContentLoaded', function() {
+		var closeBtn = document.querySelector('#notification-popup .popup-close');
+		if (closeBtn) {
+			closeBtn.addEventListener('click', closeNotificationPopup);
+		}
+	});
 })();
 </script>
 </body>
