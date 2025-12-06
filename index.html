@@ -282,6 +282,211 @@ body{}
 				}
 			}
 		</style>
+		<style id="enhanced-footer-css">
+			/* Enhanced Footer Styles */
+			#colophon {
+				background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+				position: relative;
+				overflow: hidden;
+			}
+			
+			#colophon::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+				opacity: 0.5;
+			}
+			
+			#colophon > * {
+				position: relative;
+				z-index: 1;
+			}
+			
+			.enhanced-footer-wrapper {
+				padding: 60px 0 30px;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			
+			.footer-logo-section {
+				text-align: center;
+				margin-bottom: 50px;
+			}
+			
+			.footer-logo-section .hfe-site-logo-img {
+				filter: brightness(1.1);
+				transition: transform 0.3s ease, filter 0.3s ease;
+				max-width: 200px;
+				height: auto;
+			}
+			
+			.footer-logo-section a:hover .hfe-site-logo-img {
+				transform: scale(1.05);
+				filter: brightness(1.2);
+			}
+			
+			.footer-contact-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 30px;
+				margin-bottom: 50px;
+				padding: 0 20px;
+			}
+			
+			.footer-contact-item {
+				display: flex;
+				align-items: flex-start;
+				gap: 15px;
+				padding: 25px;
+				background: rgba(255, 255, 255, 0.05);
+				backdrop-filter: blur(10px);
+				border-radius: 12px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				transition: all 0.3s ease;
+				color: #ffffff;
+			}
+			
+			.footer-contact-item:hover {
+				background: rgba(255, 255, 255, 0.1);
+				border-color: rgba(255, 255, 255, 0.2);
+				transform: translateY(-5px);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+			}
+			
+			.footer-contact-item img {
+				width: 24px;
+				height: 24px;
+				flex-shrink: 0;
+				filter: brightness(0) invert(1);
+				opacity: 0.9;
+			}
+			
+			.footer-contact-item .contact-content {
+				flex: 1;
+			}
+			
+			.footer-contact-item .contact-label {
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: rgba(255, 255, 255, 0.6);
+				margin-bottom: 8px;
+				font-weight: 600;
+			}
+			
+			.footer-contact-item .contact-value {
+				font-size: 16px;
+				line-height: 1.6;
+				color: #ffffff;
+				font-weight: 400;
+			}
+			
+			.footer-contact-item .contact-value a {
+				color: #ffffff;
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+			
+			.footer-contact-item .contact-value a:hover {
+				color: #c78960;
+			}
+			
+			.footer-divider {
+				height: 1px;
+				background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+				margin: 40px 20px;
+			}
+			
+			.footer-bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 25px 20px;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+			
+			.footer-copyright {
+				color: rgba(255, 255, 255, 0.7);
+				font-size: 14px;
+				margin: 0;
+			}
+			
+			.footer-copyright a {
+				color: rgba(255, 255, 255, 0.7);
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+			
+			.footer-copyright a:hover {
+				color: #c78960;
+			}
+			
+			.footer-address-box-list {
+				display: none; /* Hide old structure */
+			}
+			
+			/* Property Image Headings - Consistent Sizing */
+			.list .elementor-widget-heading .elementor-heading-title {
+				font-size: 20px !important;
+				line-height: 1.4 !important;
+				font-weight: 600 !important;
+				margin: 15px 0 0 0 !important;
+				text-align: center;
+				color: #333333 !important;
+			}
+			
+			.list .elementor-widget-heading .elementor-heading-title a {
+				color: #333333 !important;
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+			
+			.list .elementor-widget-heading .elementor-heading-title a:hover {
+				color: #c78960 !important;
+			}
+			
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.enhanced-footer-wrapper {
+					padding: 40px 0 20px;
+				}
+				
+				.footer-contact-grid {
+					grid-template-columns: 1fr;
+					gap: 20px;
+					padding: 0 15px;
+				}
+				
+				.footer-contact-item {
+					padding: 20px;
+				}
+				
+				.footer-bottom {
+					flex-direction: column;
+					text-align: center;
+					padding: 20px 15px;
+				}
+				
+				.footer-logo-section {
+					margin-bottom: 30px;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.footer-contact-item .contact-value {
+					font-size: 14px;
+				}
+				
+				.footer-copyright {
+					font-size: 12px;
+				}
+			}
+		</style>
 		</head>
 
 <body class="home wp-singular page-template page-template-template-homepage page-template-template-homepage-php page page-id-15 wp-embed-responsive wp-theme-luxtower wp-child-theme-luxtower-child ehf-header ehf-footer ehf-template-luxtower ehf-stylesheet-luxtower-child no-wc-breadcrumb has-post-thumbnail elementor-default elementor-kit-8 elementor-page elementor-page-15">
@@ -763,6 +968,20 @@ body{}
 				</div>
 		<div class="elementor-element elementor-element-8746ba1 upcomingpronewbox e-flex e-con-boxed e-con e-parent" data-id="8746ba1" data-element_type="container">
 					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-29d742b list e-flex e-con-boxed e-con e-child" data-id="29d742b" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-85e7146 elementor-widget elementor-widget-image" data-id="85e7146" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+														<a href="the-clarks-Pushkar/index.html">
+							<img loading="lazy" decoding="async" width="1536" height="1007" src="wp-content/uploads/2024/06/Untitled-design-9-2.jpeg" class="attachment-full size-full wp-image-7744" alt="" srcset="wp-content/uploads/2024/06/Untitled-design-9-2.jpeg 1536w" sizes="(max-width: 1536px) 100vw, 1536px" />								</a>
+													</div>
+				</div>
+				<div class="elementor-element elementor-element-2230a51 elementor-widget elementor-widget-heading" data-id="2230a51" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="the-clarks-Pushkar/index.html">Clarks Resort Naugaon</a></h2>		</div>
+				</div>
+					</div>
+				</div>
 		<div class="elementor-element elementor-element-39d5648 list e-flex e-con-boxed e-con e-child" data-id="39d5648" data-element_type="container">
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-5597acb elementor-widget elementor-widget-image" data-id="5597acb" data-element_type="widget" data-widget_type="image.default">
@@ -777,20 +996,6 @@ body{}
 				</div>
 					</div>
 				</div>
-		<div class="elementor-element elementor-element-29d742b list e-flex e-con-boxed e-con e-child" data-id="29d742b" data-element_type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-85e7146 elementor-widget elementor-widget-image" data-id="85e7146" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-														<a href="the-clarks-Pushkar/index.html">
-							<img loading="lazy" decoding="async" width="1536" height="1007" src="wp-content/uploads/2024/06/Untitled-design-9-2.png" class="attachment-full size-full wp-image-7744" alt="" srcset="wp-content/uploads/2024/06/Untitled-design-9-2.png 1536w, wp-content/uploads/2024/06/Untitled-design-9-2-300x197.png 300w, wp-content/uploads/2024/06/Untitled-design-9-2-1024x671.png 1024w, wp-content/uploads/2024/06/Untitled-design-9-2-768x504.png 768w" sizes="(max-width: 1536px) 100vw, 1536px" />								</a>
-													</div>
-				</div>
-				<div class="elementor-element elementor-element-2230a51 elementor-widget elementor-widget-heading" data-id="2230a51" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="the-clarks-Pushkar/index.html">the clarks naugaon</a></h2>		</div>
-				</div>
-					</div>
-				</div>
 		<div class="elementor-element elementor-element-3b76691 list e-flex e-con-boxed e-con e-child" data-id="3b76691" data-element_type="container">
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-cf5d5ec elementor-widget elementor-widget-image" data-id="cf5d5ec" data-element_type="widget" data-widget_type="image.default">
@@ -798,6 +1003,10 @@ body{}
 														<a href="clarks-Pushkar/index.html">
 							<img loading="lazy" decoding="async" width="980" height="642" src="wp-content/uploads/2024/06/Untitled-design-12-1-1024x671.png" class="attachment-large size-large wp-image-7745" alt="" srcset="wp-content/uploads/2024/06/Untitled-design-12-1-1024x671.png 1024w, wp-content/uploads/2024/06/Untitled-design-12-1-300x197.png 300w, wp-content/uploads/2024/06/Untitled-design-12-1-768x504.png 768w, wp-content/uploads/2024/06/Untitled-design-12-1.png 1536w" sizes="(max-width: 980px) 100vw, 980px" />								</a>
 													</div>
+				</div>
+				<div class="elementor-element elementor-element-cf5d5ec-heading elementor-widget elementor-widget-heading" data-id="cf5d5ec-heading" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"><a href="clarks-Pushkar/index.html">Clarks pushkar</a></h2>		</div>
 				</div>
 					</div>
 				</div>
@@ -814,66 +1023,79 @@ body{}
 	</div><!-- #content -->
 
 			<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
-			<div class='footer-width-fixer'>		<div data-elementor-type="wp-post" data-elementor-id="36" class="elementor elementor-36">
-						<div class="elementor-section elementor-top-section elementor-element elementor-element-41004eb elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="41004eb" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68b2b45" data-id="68b2b45" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-section elementor-inner-section elementor-element elementor-element-3300af3 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="3300af3" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ad0730c" data-id="ad0730c" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-c125e02 elementor-widget-mobile__width-auto elementor-widget elementor-widget-site-logo" data-id="c125e02" data-element_type="widget" data-settings="{&quot;align&quot;:&quot;center&quot;,&quot;width&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;width_tablet&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;width_mobile&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_tablet&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_mobile&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;image_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;image_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;caption_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;caption_padding_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;caption_padding_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;caption_space&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;caption_space_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;caption_space_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="site-logo.default">
-				<div class="elementor-widget-container">
-					<div class="hfe-site-logo">
-													<a data-elementor-open-lightbox=""  class='elementor-clickable' href="index.html">
+			<div class='footer-width-fixer'>
+				<div class="enhanced-footer-wrapper">
+					<!-- Logo Section -->
+					<div class="footer-logo-section">
+						<a data-elementor-open-lightbox="" class='elementor-clickable' href="index.html">
 							<div class="hfe-site-logo-set">           
-				<div class="hfe-site-logo-container">
-									<img class="hfe-site-logo-img elementor-animation-"  src="wp-content/uploads/2021/12/newlogoboth-350x62-1.png" alt="newlogoboth-350x62"/>
+								<div class="hfe-site-logo-container">
+									<img class="hfe-site-logo-img elementor-animation-" src="wp-content/uploads/2021/12/newlogoboth-350x62-1.png" alt="Clarks Resort Logo"/>
+								</div>
+							</div>
+						</a>
+					</div>
+					
+					<!-- Contact Information Grid -->
+					<div class="footer-contact-grid">
+						<div class="footer-contact-item">
+							<img src="wp-content/uploads/2023/02/location.html" alt="Location Icon" />
+							<div class="contact-content">
+								<div class="contact-label">Our Address</div>
+								<div class="contact-value">Emaar capital Business Park, Mg Road, Gurgaon</div>
+							</div>
+						</div>
+						
+						<div class="footer-contact-item">
+							<img src="wp-content/uploads/2023/02/call-icon.html" alt="Phone Icon" />
+							<div class="contact-content">
+								<div class="contact-label">Phone</div>
+								<div class="contact-value"><a href="tel:+919671841600">+91 9671841600</a></div>
+							</div>
+						</div>
+						
+						<div class="footer-contact-item">
+							<img src="wp-content/uploads/2023/02/mail.html" alt="Email Icon" />
+							<div class="contact-content">
+								<div class="contact-label">Email</div>
+								<div class="contact-value"><a href="mailto:Akshay@investwithclarks.com">Akshay@investwithclarks.com</a></div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Divider -->
+					<div class="footer-divider"></div>
+					
+					<!-- Footer Bottom -->
+					<div class="footer-bottom">
+						<p class="footer-copyright">© 2022 investwithclarks<a href="https://hditechnology.in/">.</a> All Rights Reserved.</p>
+					</div>
+					
+					<!-- Hide old footer structure -->
+					<div style="display:none;">
+						<div data-elementor-type="wp-post" data-elementor-id="36" class="elementor elementor-36">
+							<div class="elementor-section elementor-top-section elementor-element elementor-element-41004eb elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="41004eb" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+								<div class="elementor-container elementor-column-gap-no">
+									<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68b2b45" data-id="68b2b45" data-element_type="column">
+										<div class="elementor-widget-wrap elementor-element-populated">
+											<div class="elementor-section elementor-inner-section elementor-element elementor-element-3300af3 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="3300af3" data-element_type="section">
+												<div class="elementor-container elementor-column-gap-default">
+													<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ad0730c" data-id="ad0730c" data-element_type="column">
+														<div class="elementor-widget-wrap elementor-element-populated">
+															<div class="footer_address_box_list"><img src="wp-content/uploads/2023/02/location.html" />Emaar capital Business Park, Mg Road, Gurgaon</div><div class="footer_address_box_list"><img src="wp-content/uploads/2023/02/call-icon.html" /><a href="tel: +91 9671841600">+91 9671841600</a></div><div class="footer_address_box_list"><img src="wp-content/uploads/2023/02/mail.html" /><a href="mailto:Akshay@investwithclarks.com">Akshay@investwithclarks.com</a></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-							</a>
-						</div>  
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-05fe780 footeraddrestext elementor-widget elementor-widget-text-editor" data-id="05fe780" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<div class="footer_address_box_list"><img src="wp-content/uploads/2023/02/location.html" />Emaar capital Business Park, Mg Road, Gurgaon</div><div class="footer_address_box_list"><img src="wp-content/uploads/2023/02/call-icon.html" /><a href="tel: +91 9671841600">+91 9671841600</a></div><div class="footer_address_box_list"><img src="wp-content/uploads/2023/02/mail.html" /><a href="mailto:Akshay@investwithclarks.com">Akshay@investwithclarks.com</a></div>						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</div>
-				<div class="elementor-element elementor-element-8832c53 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="8832c53" data-element_type="widget" data-widget_type="divider.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-divider">
-			<span class="elementor-divider-separator">
-						</span>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-section elementor-inner-section elementor-element elementor-element-02a125b elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="02a125b" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d0350c6" data-id="d0350c6" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-cae0890 elementor-widget elementor-widget-text-editor" data-id="cae0890" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-							<p>© 2022 investwithclarks<a href="https://hditechnology.in/">.</a> All Rights Reserved.</p>						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a7b55ee" data-id="a7b55ee" data-element_type="column">
-			<div class="elementor-widget-wrap">
-							</div>
-		</div>
-					</div>
-		</div>
-					</div>
-		</div>
-					</div>
-		</div>
-				</div>
-		</div>		</footer>
+		</footer>
 	
 </div><!-- #page -->
 
